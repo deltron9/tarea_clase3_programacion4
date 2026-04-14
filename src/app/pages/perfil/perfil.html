@@ -3,31 +3,25 @@
     
     <div class="profile-header">
       <div class="avatar">
-        <span>D</span>
+        <img src="{{ this.api.usuarioGithub().avatar_url}}" alt="Avatar">
       </div>
-      <h1 class="user-name">DELTRON<span>DEV</span></h1>
-      <span class="badge">System Admin</span>
+      <h1 class="user-name">{{ this.api.usuarioGithub().name }}</h1>
+      <span class="badge">Se busca por malo</span>
     </div>
 
     <div class="data-panel">
       <div class="data-row">
-        <span class="label">Identificador</span>
-        <span class="value">#001-DT</span>
+        <span class="label">Nombre Clave</span>
+        <span class="value">{{ this.api.usuarioGithub().login }}</span>
       </div>
       <div class="data-row">
-        <span class="label">Email de red</span>
-        <span class="value">deltron@developer.dev</span>
+        <span class="label">URL de perfil</span>
+        <span class="value">{{ this.api.usuarioGithub().html_url }}</span>
       </div>
       <div class="data-row">
-        <span class="label">Estado de cuenta</span>
-        <span class="value">Activo</span>
+        <span class="label">Biografía</span>
+        <span class="value">{{ this.api.usuarioGithub().bio }}</span>
       </div>
     </div>
-
-    <div class="profile-footer">
-      <button class="btn-edit" type="button">Configuración</button>
-      <button class="btn-logout" type="button">Terminar Sesión</button>
-    </div>
-
   </div>
 </main>

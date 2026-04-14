@@ -1,9 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Api } from '../../services/api';
 
 @Component({
   selector: 'app-perfil',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './perfil.html',
   styleUrl: './perfil.css',
 })
-export class Perfil {}
+export class Perfil {
+  api = inject(Api);
+
+  ngOnInit() {
+    this.api.obtenerUsuario();
+  }
+
+}
+
