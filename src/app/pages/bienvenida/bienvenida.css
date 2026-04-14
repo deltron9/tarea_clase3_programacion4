@@ -1,0 +1,77 @@
+:host {
+  --main-col: #ffeba7;
+  --bg-col: #2a2b38;
+  --bg-field: #1f2029;
+  display: block;
+}
+
+.deltron-screen {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-col);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fondo con efecto de red sutil */
+.deltron-screen::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 235, 167, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 235, 167, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.welcome-msg {
+  text-align: center;
+  z-index: 1;
+}
+
+.title {
+  margin: 0;
+  font-size: 5em; /* Más grande al ser el único elemento */
+  font-weight: 900;
+  color: var(--main-col);
+  text-shadow: 0 0 25px var(--main-col);
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  animation: glow 3s infinite alternate;
+}
+
+.status-msg {
+  color: var(--main-col);
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  margin-top: 1rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+/* Línea decorativa estilo escáner */
+.scan-line {
+  width: 100%;
+  height: 2px;
+  background: var(--main-col);
+  margin-top: 20px;
+  box-shadow: 0 0 10px var(--main-col);
+  opacity: 0.3;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px var(--main-col);
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 0 0 35px var(--main-col), 0 0 10px var(--main-col);
+    transform: scale(1.02);
+  }
+}

@@ -1,0 +1,142 @@
+:host {
+  --main-col: #ffeba7;
+  --bg-col: #2a2b38;
+  --bg-field: #1f2029;
+  display: block;
+}
+
+.profile-layout {
+  min-height: calc(100vh - 70px);
+  background-color: var(--bg-col);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--bg-col);
+  border: 1px solid var(--main-col);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Identidad Visual */
+.avatar {
+  width: 90px;
+  height: 90px;
+  background-color: var(--bg-field);
+  border: 2px solid var(--main-col);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 235, 167, 0.3);
+}
+
+.avatar span {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--main-col);
+}
+
+.user-name {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user-name span {
+  color: var(--main-col);
+  text-shadow: 0 0 10px var(--main-col);
+}
+
+.badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--main-col);
+  background-color: var(--bg-field);
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+/* Datos de Red */
+.data-panel {
+  margin: 2.5rem 0;
+  background: var(--bg-field);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 235, 167, 0.05);
+}
+
+.data-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 0.85rem;
+  color: var(--main-col);
+  font-weight: 600;
+}
+
+/* Botones de Control */
+.profile-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-edit {
+  background-color: var(--main-col);
+  color: var(--bg-col);
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-edit:hover {
+  background-color: var(--bg-field);
+  color: var(--main-col);
+  box-shadow: 0 0 15px rgba(255, 235, 167, 0.2);
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid #ff5f5f;
+  color: #ff5f5f;
+  border-radius: 4px;
+  padding: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #ff5f5f;
+  color: #fff;
+}

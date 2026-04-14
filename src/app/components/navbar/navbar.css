@@ -1,0 +1,94 @@
+:host {
+  --main-col: #ffeba7;
+  --bg-col: #2a2b38;
+  --bg-field: #1f2029;
+  display: block;
+}
+
+.navbar {
+  background-color: var(--bg-col);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--bg-field);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Estilo Deltron */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f5f5f5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-logo span {
+  color: var(--main-col);
+  text-shadow: 1px 1px 15px var(--main-col);
+}
+
+/* Contenedor de botones */
+.nav-auth {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Botones tipo Link (Bienvenida, Profile, Log In) */
+button {
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  color: var(--main-col);
+  text-shadow: 0 0 8px var(--main-col);
+}
+
+/* Botón Principal (Register) basado en .btn */
+.btn-nav-main {
+  background-color: var(--main-col) !important;
+  color: var(--bg-col) !important;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255, 235, 167, 0.1);
+}
+
+.btn-nav-main:hover {
+  background-color: var(--bg-field) !important;
+  color: var(--main-col) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Ajuste para los links que no son el principal */
+.btn-nav-link {
+  opacity: 0.8;
+}
+
+.btn-nav-link:hover {
+  opacity: 1;
+}
